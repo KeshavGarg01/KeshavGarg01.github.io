@@ -189,17 +189,62 @@ function toggleFaq(btn) {
   if (!wasOpen) item.classList.add('open');
 }
 
-/* ─── FORM SUBMIT ─── */
-function submitForm() {
+/* ─── FORM SUBMIT (Web3Forms) ─── */
+const WEB3FORMS_ACCESS_KEY = '97d9504c-5172-42fe-bdd2-f9d91e8494be'; // ← Replace with your actual key
+
+async function submitForm() {
   const name = document.getElementById('f-name').value.trim();
   const phone = document.getElementById('f-phone').value.trim();
+  const city = document.getElementById('f-city').value.trim();
   const cls = document.getElementById('f-class').value;
+  const concern = document.getElementById('f-concern').value;
+  const honeypot = document.getElementById('f-honeypot').value;
+
+  // Spam bot check — real users never fill the hidden field
+  if (honeypot) return;
+
   if (!name || !phone || !cls) {
     alert("Please fill in your name, WhatsApp number, and your child's class 😊");
     return;
   }
-  document.getElementById('booking-form').classList.add('submitted');
-  document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  // Show loading state
+  const btn = document.querySelector('.form-submit');
+  const originalText = btn.textContent;
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  btn.style.opacity = '0.7';
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: '📞 New Callback Request — Career Momentum',
+        from_name: 'Career Momentum Website',
+        name: name,
+        phone: phone,
+        city: city || 'Not provided',
+        class: cls,
+        concern: concern || 'Not specified',
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      document.getElementById('booking-form').classList.add('submitted');
+      document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      throw new Error(result.message || 'Submission failed');
+    }
+  } catch (error) {
+    alert('Something went wrong. Please try again or reach out to us on WhatsApp.');
+    btn.textContent = originalText;
+    btn.disabled = false;
+    btn.style.opacity = '1';
+  }
 }
 
 /* ─── MOBILE NAV ─── */
