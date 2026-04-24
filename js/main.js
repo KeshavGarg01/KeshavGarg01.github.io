@@ -198,10 +198,10 @@ async function submitForm() {
   const city = document.getElementById('f-city').value.trim();
   const cls = document.getElementById('f-class').value;
   const concern = document.getElementById('f-concern').value;
-  const honeypot = document.getElementById('f-honeypot').value;
+  const honeypotEl = document.getElementById('f-honeypot');
 
   // Spam bot check — real users never fill the hidden field
-  if (honeypot) return;
+  if (honeypotEl && honeypotEl.value) return;
 
   if (!name || !phone || !cls) {
     alert("Please fill in your name, WhatsApp number, and your child's class 😊");
