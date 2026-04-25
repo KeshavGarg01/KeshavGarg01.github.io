@@ -248,31 +248,16 @@ async function submitForm() {
 }
 
 /* ─── MOBILE NAV ─── */
-document.querySelector('.hamburger').addEventListener('click', function () {
-  const links = document.querySelector('.nav-links');
-  if (links.style.display === 'flex') {
-    links.style.display = 'none';
-  } else {
-    links.style.display = 'flex';
-    links.style.flexDirection = 'column';
-    links.style.position = 'fixed';
-    links.style.top = '0';
-    links.style.left = '0';
-    links.style.right = '0';
-    links.style.bottom = '0';
-    links.style.background = 'rgba(255,255,255,0.98)';
-    links.style.justifyContent = 'center';
-    links.style.alignItems = 'center';
-    links.style.gap = '28px';
-    links.style.zIndex = '99';
-    links.style.fontSize = '1.2rem';
-  }
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', function () {
+  navLinks.classList.toggle('mobile-open');
 });
 
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => {
-    const links = document.querySelector('.nav-links');
-    links.style.display = '';
+    navLinks.classList.remove('mobile-open');
   });
 });
 
