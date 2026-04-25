@@ -62,7 +62,7 @@
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 100;
+      z-index: 1100;
       padding: 18px 5%;
       display: flex;
       align-items: center;
@@ -1422,7 +1422,7 @@
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
       .nav-links { display: none; }
-      .hamburger { display: flex; z-index: 1001; position: relative; }
+      .hamburger { display: flex; }
       .form-row { grid-template-columns: 1fr; }
 
       /* Mobile menu overlay */
