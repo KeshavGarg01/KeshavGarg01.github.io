@@ -1,4 +1,14 @@
+# robots.txt — https://keshaavgarg.in
+# Last updated: 2026-04-25
+
+# Allow all search engines full access
 User-agent: *
 Allow: /
 
-Sitemap: https://keshavgarg01.github.io/sitemap.xml
+# Block crawling of non-content assets (saves crawl budget)
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
+
+# Sitemap location
+Sitemap: https://keshaavgarg.in/sitemap.xml
