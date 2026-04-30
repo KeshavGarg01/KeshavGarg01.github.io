@@ -253,11 +253,15 @@ const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', function () {
   navLinks.classList.toggle('mobile-open');
+  navbar.classList.toggle('menu-active');
+  hamburger.classList.toggle('active');
 });
 
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => {
     navLinks.classList.remove('mobile-open');
+    navbar.classList.remove('menu-active');
+    hamburger.classList.remove('active');
   });
 });
 
