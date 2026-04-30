@@ -76,6 +76,10 @@
       box-shadow: 0 1px 0 var(--border);
     }
 
+    nav.menu-active {
+      backdrop-filter: none !important;
+    }
+
     .nav-logo {
       font-family: var(--font-display);
       font-size: 1.35rem;
@@ -116,8 +120,14 @@
       transform: translateY(-1px);
     }
 
-    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; padding: 4px; }
-    .hamburger span { width: 24px; height: 2px; background: var(--slate); border-radius: 2px; transition: 0.3s; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; padding: 4px; position: relative; z-index: 1001; }
+    .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: 0.3s; }
+    nav.scrolled .hamburger span { background: var(--slate); }
+    nav.menu-active .hamburger span { background: var(--slate) !important; }
+    
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     /* ═══════════════════════════════════
        HERO SECTION
@@ -1446,6 +1456,10 @@
 
       .nav-links.mobile-open li {
         list-style: none;
+      }
+
+      .nav-links.mobile-open a {
+        font-size: 1.2rem;
       }
 
       @keyframes fadeInMenu {
