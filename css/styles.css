@@ -882,8 +882,8 @@ nav.menu-active .hamburger span {
   content: '';
   position: absolute;
   top: 36px;
-  left: calc(16.66% + 20px);
-  right: calc(16.66% + 20px);
+  left: calc(10% + 20px);
+  right: calc(10% + 20px);
   height: 2px;
   background: linear-gradient(90deg, var(--teal), var(--amber));
 }

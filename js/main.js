@@ -42,7 +42,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 /* ─── STEPS STAGGER ─── */
-[1, 2, 3].forEach((n, i) => {
+[1, 2, 3, 4, 5].forEach((n, i) => {
   const el = document.getElementById('step-' + n);
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
