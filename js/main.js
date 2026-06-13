@@ -76,7 +76,7 @@ const audData = {
   student: [
     { icon: '🎯', title: 'Find your direction', desc: "Confused between Science, Commerce and Arts? We break it down based on who you actually are — not what your relatives suggest." },
     { icon: '🔍', title: 'Discover your strengths', desc: "5 assessments tell you what you're naturally good at, how you think, and what kind of work energises you." },
-    { icon: '🚀', title: 'Build your profile', desc: "From Class 5 onwards — build a profile of skills, activities and achievements that stands out in college applications." },
+    { icon: '🚀', title: 'Build your profile', desc: "From Class 9 onwards — build a profile of skills, activities and achievements that stands out in college applications." },
   ],
   parent: [
     { icon: '🧭', title: 'Stop guessing', desc: "Get a professional, science-backed answer to 'what should my child study' — not an opinion, a data-driven direction." },
@@ -106,9 +106,9 @@ function setAudience(type) {
 /* ─── SERVICES DATA ─── */
 const servicesData = [
   { icon: '🧭', title: 'Career Clarity & Direction', desc: 'Helping students identify career paths aligned with their strengths, personality, and future opportunities.', tag: 'Core Service' },
-  { icon: '📋', title: 'Future-Ready Career Planning', desc: 'Exploring emerging careers, AI impact, degree pathways, and market realities. ', tag: 'Class 5–12' },
+  { icon: '📋', title: 'Future-Ready Career Planning', desc: 'Exploring emerging careers, AI impact, degree pathways, and market realities. ', tag: 'Class 9–12' },
   { icon: '🔬', title: 'Scientific Career Assessment', desc: 'MBTI, RIASEC, Multiple Intelligence, EQ and Learning Style — interpreted by a certified professional, not a machine.', tag: 'Science-backed' },
-  { icon: '🌱', title: 'Parent Decision Support', desc: 'Helping parents make informed decisions without conflict, confusion, or unnecessary pressure.', tag: 'Class 5–8' },
+  { icon: '🌱', title: 'Parent Decision Support', desc: 'Helping parents make informed decisions without conflict, confusion, or unnecessary pressure.', tag: 'Class 9–12' },
   { icon: '🎓', title: 'Stream Selection Confidence', desc: 'The Class 10 decision decoded. Science, Commerce, Arts, Vocational — mapped to the student\'s actual strengths and goals.', tag: 'Class 9–10' },
   { icon: '🗺️', title: 'College & Entrance Roadmap', desc: 'Which colleges to target, which entrances to prepare for, and a timeline that doesn\'t leave everything to the last minute.', tag: 'Class 11–12' },
 ];
@@ -162,7 +162,6 @@ function scrollTesti(dir) {
 /* ─── FAQ ─── */
 const faqs = [
   { q: "Will one session actually help? (Honest answer below)", a: "The free discovery call alone gives most students and parents 2–3 clear action steps. The real depth happens after the assessments. But yes — even one conversation shifts perspective." },
-  { q: "My child is in Class 6. Isn't it too early?", a: "Class 5–8 is the best time to start. Not for career decisions — for building self-awareness, confidence, and habits. The earlier students understand their strengths, the less anxious they are by Class 10." },
   { q: "How is this different from a school counsellor?", a: "School counsellors are excellent but stretched thin — one counsellor to 500 students. Here you get a globally certified counsellor, 1:1 sessions, and time dedicated entirely to your child." },
   { q: "Is this only for students doing well academically?", a: "Not at all. In fact, some of the best outcomes come from students who struggle academically because they're in the wrong stream or learning environment. Assessments often explain why." },
   { q: "What happens after the free call?", a: "We share a simple overview of what an assessment + report session would look like. No pressure, no sales pitch. You decide if and when you want to move forward." },
