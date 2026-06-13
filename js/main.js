@@ -105,11 +105,11 @@ function setAudience(type) {
 
 /* ─── SERVICES DATA ─── */
 const servicesData = [
-  { icon: '🧭', title: 'Career Counselling', desc: 'One-on-one sessions to explore interests, strengths, and suitable career paths. From Class 10 right through to Class 12.', tag: 'Core Service' },
-  { icon: '📋', title: 'Profile Building', desc: 'Systematic documentation of a student\'s achievements, activities, and skills — for college applications and personal clarity. ', tag: 'Class 5–12' },
-  { icon: '🔬', title: 'Psychometric Assessments', desc: 'MBTI, RIASEC, Multiple Intelligence, EQ and Learning Style — interpreted by a certified professional, not a machine.', tag: 'Science-backed' },
-  { icon: '🌱', title: 'Holistic Development', desc: 'Confidence, communication, time management, and emotional resilience — skills that outlast any career choice.', tag: 'Class 5–8' },
-  { icon: '🎓', title: 'Stream Selection', desc: 'The Class 10 decision decoded. Science, Commerce, Arts, Vocational — mapped to the student\'s actual strengths and goals.', tag: 'Class 9–10' },
+  { icon: '🧭', title: 'Career Clarity & Direction', desc: 'Helping students identify career paths aligned with their strengths, personality, and future opportunities.', tag: 'Core Service' },
+  { icon: '📋', title: 'Future-Ready Career Planning', desc: 'Exploring emerging careers, AI impact, degree pathways, and market realities. ', tag: 'Class 5–12' },
+  { icon: '🔬', title: 'Scientific Career Assessment', desc: 'MBTI, RIASEC, Multiple Intelligence, EQ and Learning Style — interpreted by a certified professional, not a machine.', tag: 'Science-backed' },
+  { icon: '🌱', title: 'Parent Decision Support', desc: 'Helping parents make informed decisions without conflict, confusion, or unnecessary pressure.', tag: 'Class 5–8' },
+  { icon: '🎓', title: 'Stream Selection Confidence', desc: 'The Class 10 decision decoded. Science, Commerce, Arts, Vocational — mapped to the student\'s actual strengths and goals.', tag: 'Class 9–10' },
   { icon: '🗺️', title: 'College & Entrance Roadmap', desc: 'Which colleges to target, which entrances to prepare for, and a timeline that doesn\'t leave everything to the last minute.', tag: 'Class 11–12' },
 ];
 
